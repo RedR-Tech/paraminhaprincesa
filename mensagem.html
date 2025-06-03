@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mensagem Especial 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #000000, #6a0dad);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 60px 30px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #ff69b4;
+    }
+
+    p {
+      font-size: 1.4em;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6em;
+      color: #ffe6ff;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    #recado {
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      font-size: 1.3em;
+      font-style: italic;
+      color: #ffd6ea;
+      background-color: rgba(255, 20, 147, 0.15);
+      padding: 20px 25px;
+      border-radius: 20px;
+      border: 2px solid #ff69b4;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      user-select: none;
+    }
+
+    button#btnTocar {
+      font-size: 1.3em;
+      padding: 12px 30px;
+      background-color: #6a0dad;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(106, 13, 173, 0.7);
+      transition: background-color 0.3s ease;
+    }
+
+    button#btnTocar:hover {
+      background-color: #4b067c;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #b33a3a;
+      padding: 12px 30px;
+      border-radius: 20px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(179, 58, 58, 0.7);
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #8a2c2c;
+    }
+
+    .estrelas::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png');
+      animation: piscar 2s infinite ease-in-out;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    @keyframes piscar {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body class="estrelas">
+
+  <h1>Para a minha princesa 💖</h1>
+  <p>
+    Nestes 4 meses juntos, cada momento ao seu lado foram criadas várias memórias inesquecíveis minha princesa.
+    Me lembro muito bem de quando eu fui até a sua casa para pedir a benção do seu pai e de sua mãe, foi no dia 03
+    de fevereiro, no dia do homem ao máximo, às 22:00 mais ou menos. Me lembro que você estava até de blusa de frio kkk,
+    me lembro de ficarmos sentados na cadeira depois conversando. Sabe, eu não me arrependo de ter te conhecido, não me arrependo 
+    de ter chamado você para tomar aquela barca de açaí, não me arrependo de ter chamado você para caminhar no bosque, não me arrependo 
+    de ter chamado você para fazer academia comigo. Eu não me arrependo de nada, eu passaria tudo de novo com você. Quando estou ao seu lado, me sinto seguro,
+    me sinto amado, me sinto muuuito confortável. Saiba que eu te amo muuitãoooo minha princesa, agradeço a Deus por ter colocado você em minha vida. 
+    <strong>EU, RAUL VIEIRA DE ALMEIDA, AMO VOCÊ, LAYANE FARIA DOS SANTOS ❤️</strong>
+  </p>
+
+  <div id="recado">
+    Sempre que escuto essa música me alegro, me vem a cabeça você minha princesa, pois então por isso escolhi essa música, pois eu lembro de você.
+  </div>
+
+  <button id="btnTocar">Escutar música 🎵</button>
+
+  <a href="contador.html">Voltar para o contador</a>
+
+  <audio id="musicaFundo" src="musica.mp3" loop></audio>
+
+  <script>
+    const audio = document.getElementById('musicaFundo');
+    const btnTocar = document.getElementById('btnTocar');
+
+    btnTocar.addEventListener('click', () => {
+      audio.play();
+      btnTocar.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
