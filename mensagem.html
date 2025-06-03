@@ -91,6 +91,21 @@
       0%, 100% { opacity: 0.1; }
       50% { opacity: 0.3; }
     }
+
+    #controleVolume {
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#volumeSlider {
+  width: 200px;
+  accent-color: #ff69b4;
+  cursor: pointer;
+}
+
   </style>
 </head>
 <body class="estrelas">
@@ -111,7 +126,12 @@
     Sempre que escuto essa música me alegro, me vem a cabeça você minha princesa, pois então por isso escolhi essa música, pois eu lembro de você.
   </div>
 
-  <button id="btnTocar">Escutar música 🎵</button>
+    <button id="btnTocar">Escutar música 🎵</button>
+
+  <div id="controleVolume">
+    <label for="volumeSlider">🔊 Volume</label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+  </div>
 
   <a href="index.html">Voltar para o contador</a>
 
@@ -120,12 +140,15 @@
   <script>
     const audio = document.getElementById('musicaFundo');
     const btnTocar = document.getElementById('btnTocar');
+    const volumeSlider = document.getElementById('volumeSlider');
 
     btnTocar.addEventListener('click', () => {
       audio.play();
       btnTocar.style.display = 'none';
     });
+
+    volumeSlider.addEventListener('input', () => {
+      audio.volume = volumeSlider.value;
+    });
   </script>
 
-</body>
-</html>
